@@ -1,0 +1,588 @@
+/* setting default font and size */
+*, .opensans {
+	font-family: 'Open Sans', Arial, Verdana, sans-serif;
+}
+.exo, h1, h2, h3, h4, #top nav div, footer, 
+.button a, figure figcaption, th, .card .header-image .rating {
+	font-family: 'Exo 2', 'Open Sans', Arial, Verdana, sans-serif;
+}
+
+/* GENERAL */
+p, ul, ol {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+h1, h2, h3 {
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.85rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; font-style: italic; }
+
+a {
+	color: #5d7a1e;
+	text-decoration: none;
+	border-bottom: .07rem solid rgba(0, 0, 0, 0);
+	transition: color .25s, border-bottom-color .25s;
+}
+a:hover, a:focus {
+	outline: none;
+	color: #0a3b11;
+	border-bottom-color: #0a3b11;
+}
+
+ul {
+	padding-left: 1.5rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+.helper {
+	text-align: center;
+	font-size: .75em;
+	font-style: italic;
+}
+
+/* article dividing line */
+article h2,
+section h2 {
+	padding-top: 4rem;
+}
+article ~ article h2::before,
+section ~ article h2::before,
+section section ~ section h2::before {
+	content: '';
+	display: block;
+	margin: 2em auto;
+	margin-left: -2.5%;
+	height: .1rem;
+	width: 105%;
+	background-color: #ded068;
+	clear: both; /* clear all floats */
+}
+
+/* GRID */
+.grid {
+	display: block;
+	clear: both;
+	max-width: 80rem;
+	margin: 0 auto;
+}
+.grid::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.grid article {
+	display: block;
+	box-sizing: border-box;
+	float: left;
+	margin: .5rem auto;
+	margin-right: 2%;
+}
+
+.grid .quarter { width: 23%; }
+.grid .third { width: 31%; }
+.grid .twothird { width: 64%; }
+.grid .half { width: 48%; }
+.grid .full { width: 100%; }
+
+@media (max-width: 85rem) { 
+	.grid { margin: 0 5%; }
+}
+@media (max-width: 68.75rem) { /* 1100/16 */
+	.grid .quarter { width: 48%	}
+}
+@media ( max-width: 59.375rem ) { /* 950/16 */
+	.grid .third,
+	.grid .twothird	{ width: 48% }
+	
+	.grid .third.odd {
+		width: 100%;
+	}
+}
+@media (max-width: 43.75rem) { /* 700/16 */
+	.grid .quarter, 
+	.grid .third, 
+	.grid .twothird, 
+	.grid .half { width: 100%; margin-right: 0; }
+}
+
+.grid h2,
+.grid section {
+	clear: both;
+}
+
+.grid img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* BUTTON */
+.button a {
+	display: inline-block;
+	margin: .25rem;
+	padding: .5rem .75rem;
+	border-radius: .5rem;
+	line-height: 1.75em;
+	color: #ffffff;
+	font-weight: 600;
+	text-decoration: none;
+	background-color: #5d7a1e;
+	border-bottom: none;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, .25);
+	transition: background-color .25s, box-shadow .25s, transform .25s;
+}
+.button a:hover, 
+.button a:focus {
+	color: #ffffff;
+	background-color: #959c2a;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, .75);
+	transform: scale(1.05);
+}
+.button a:active {
+	color: #ffffff;
+	background-color: #0a3b11;
+	transform: scale(1);
+}
+
+/* BUTTON WITH ICON */
+.button a img {
+	display: inline;
+	height: 1.5em;
+	margin-right: .1rem;
+	vertical-align: -.4em;
+	transition: opacity .25s;
+}
+.button a:hover img,
+.button a:focus img {
+	opacity: .6;
+}
+
+/* TOP HEADER, FOOTER and NAV*/
+#top {
+	display: block;
+	margin-bottom: 2rem;
+}
+
+header {
+	display: block;
+	height: 25%;
+	padding: 5rem 0;
+	background-color: #0b3b0a;
+	background: 
+		linear-gradient(
+			rgba(10, 59, 17, .7), 
+			rgba(10, 59, 17, .7)
+		), 
+		url('../img/vancity-from-peak-chair-grouse-mtn-cropped.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: scroll;
+	color: #fff;
+	text-align: center;
+}
+
+footer {
+	display: block;
+	clear: both;
+	margin-top: 4rem;
+	padding: .5em 0;
+	background-color: #2c71b2;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+	color: #ffffff;
+	font-size: small;
+}
+footer a {
+	color: #ded068;
+}
+
+#top header > *,
+#top nav div,
+footer p {
+	display: block;
+	max-width: 88rem;
+	margin: 0 auto;
+}
+@media (max-width: 85rem) {
+	#top header > *,
+	footer p {
+		margin: 0 5%;
+	}
+}
+
+#top header h1 {
+	font-size: 2.5em;
+}
+ 
+#top img {
+	display: inline-block;
+	max-width: 90%;
+}
+
+#top nav {
+	display: block;
+	background: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), #5d7a1e;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
+	overflow: hidden;
+}
+
+#top nav div {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+}
+
+#top nav a {
+	flex: 1 1 0;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 1rem;
+	background-color: #5d7a1e;
+	box-shadow: inset 0 0 5rem rgba(0, 0, 0, .35);
+	color: #fff;
+	border-bottom: none;
+	transition: box-shadow 1s, background-color .5s;
+}
+#top nav a:hover:not(.banner),
+#top nav a:focus {
+	background-color: #959c2a;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, .75);
+}
+#top nav a:active,
+#top nav a:active:not(.banner),
+#top nav a.active {
+	transition: box-shadow 0;
+	box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+#top nav a div {
+	display: block;
+	margin: 0;
+	padding: .5rem 1rem;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+#top nav a img {
+	display: block;
+	padding: .5rem;
+	width: 6.25rem;
+	height: 6.25rem;
+}
+
+#top nav a img.round {
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+
+/* collapsed nav when scrolled */
+#top nav.sticky {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 900;
+	font-size: 1rem;
+	transform: translateY(-100%);
+	transition: transform .5s;
+}
+#top nav.sticky.show,
+#top nav.sticky.show.active {
+	transform: translateY(0);
+}
+
+#top nav.sticky div {
+	width: 100%;
+}
+
+#top nav.sticky a {
+	flex: 1 1 auto;
+	flex-direction: row;
+}
+
+#top nav.sticky a img {
+	width: 2.75rem;
+	height: 2.75rem;
+	padding: .25rem;
+}
+
+#top nav.sticky a.banner {
+	flex: 2 1 auto;
+	justify-content: space-between;
+	z-index: 100;
+	padding: .25rem 1rem;
+	background-color: #2c71b2;
+	font-weight: bold;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+}
+
+
+#stickymenupointer {
+	opacity: 0;
+	font-size: 1.5rem;
+	transform: rotate(90deg);
+	transition: all .5s;
+}
+#stickymenupointer.active { transform: rotate(-90deg); }
+
+#top nav.sticky a.banner img {
+	height: 2rem;
+	width: auto;
+}
+
+/* responsive */
+@media ( max-width: 57.8125rem ) { /* 925/16 */
+	#top nav.sticky a {
+		flex: 1 0 0;
+	}
+	
+	#top nav.sticky.show {
+		transform: translateY(-63.6363636%); /* 84/132% */
+	}
+	
+	#top nav.sticky a.banner {
+		order: 5;
+		cursor: pointer;
+		flex: 1 1 100%;
+	}
+	
+	#stickymenupointer {
+		opacity: 1;
+	}
+}
+
+@media ( max-width: 34.375rem ) { /* 550/16 */	
+	#top nav a img {
+		height: 3.125rem;
+		width: 3.125rem;
+	}
+	
+	#top nav.sticky.show {
+		transform: translateY(-85%); /* 85*3/300% */
+	}
+	
+	#top nav.sticky a {
+		flex: 1 1 100%;
+	}
+	
+	#top nav.sticky .banner {
+		order: 5;
+		cursor: pointer;
+		flex: 1 1 100%;
+	}
+	
+	#stickymenupointer {
+		opacity: 1;
+	}
+}
+@media ( max-width: 25rem ) { /* 400/16 */
+	#top nav a img {
+		padding: .25rem;
+	}
+}
+
+/* FIGURE */
+figure {
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	margin: 1rem 5%;
+	background-color: rgba(10, 59, 17, .5);
+	box-shadow: 0 0 1rem .1rem rgba(0, 0, 0, .25);
+}
+
+figure img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+figure figcaption {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: .5rem;
+	background-color: rgba(10, 59, 17, .5);
+	color: #ffffff;
+	font-style: italic;
+	font-size: .8rem;
+}
+
+/* TABLES */
+table {
+	width: 90%;
+	margin: 1rem auto;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: .1rem solid #959c2a;
+}
+
+th {
+	padding: .1rem;
+	background-color: #959c2a;
+	color: #ffffff;
+	font-style: italic;
+}
+
+td {
+	padding: .5rem;
+}
+
+tr {
+	background-color: #ffffff;
+	transition: background-color .25s;
+}
+tr:hover {
+	background-color: #ded068;
+}
+
+/* CARDS */
+article.card {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	width: 100%;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, .25);
+	border-radius: .5rem;
+	background-color: #4d6619;
+	color: #ffffff;
+}
+
+article.card.white {
+	background-color: #ffffff;
+	color: #4d6619;	
+}
+
+article.card.horizontal {
+	flex-flow: row nowrap;
+}
+
+article.card .header-image {
+	width: 100%;
+	height: 8rem;
+	border-radius: .5rem .5rem 0 0;
+	background-color: #ffffff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center
+}
+
+article.card .header-image.flex {
+	height: auto;
+}
+
+article.card .header-image.flex img {
+	max-height: 10rem;
+}
+
+article.card.horizontal .header-image {
+	flex: 1 1 0;
+	width: 10%;
+	height: auto;
+	border-radius: .5rem 0 0 .5rem;
+}
+
+article.card .header-image img {
+	width: 90%;
+	height: 90%;
+}
+
+article.card .text {
+	flex: 2 1 0;
+	padding: 1rem;
+}
+
+article.card .text h3 {
+	margin-top: 0;
+}
+
+/* custom cards */
+#cov-reno-guides .header-image {
+	background-image: url("../img/cov-green-home-reno.png");
+	background-position: top center;
+}
+
+#rebates .header-image {
+	background-image: url("https://www.bchydro.com/content/dam/BCHydro/customer-portal/photographs/people/public/man-applying-weather-stripping-feature-people.jpg");
+	background-position: center center;
+}
+
+#questions .header-image {
+	background-image: url("../img/qna.png");
+	background-position: center center;
+}
+
+#info-furnace-room .header-image {
+	padding: 1rem;
+}
+
+#info-furnace-room .card .header-image .rating {
+	padding-top: 1rem;
+	color: #4d6619;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5rem;
+	line-height: 1.25rem;
+}
+#info-furnace-room .card .header-image .rating small {
+	display: block;
+	font-size: .5em;
+	font-weight: normal;
+	padding-top: 0;
+}
+
+#info-kitchen .header-image {
+	background-image: url("../img/kitchen.svg");
+	background-position: center center;
+}
+
+#info-bathroom .header-image {
+	background-image: url("../img/bathroom.svg");
+	background-position: bottom center;
+}
+
+#info-living-room .header-image {
+	background-image: url("../img/living-room.svg");
+	background-position: center center;
+}
+
+#info-bedroom .header-image {
+	background-image: url("../img/bedroom.svg");
+	background-position: bottom center;
+}
+
+#getting-started-welcome .header-image {
+	padding: 1rem;
+	background-color: #4d6619;
+}
+
+#property-value .header-image.flex img,
+#monthly-bills .header-image.flex img {
+	max-height: 30rem;
+	padding: 1rem;
+}
+
+/* HOUSE */
+#house > g:not(#building):not(#walls) {
+	transition: opacity .5s;
+	cursor: pointer;
+}
+
+#house-info > article {
+	display: none;
+}
