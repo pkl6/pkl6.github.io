@@ -720,7 +720,7 @@ width: 10px;
 
 .single-sidebar-mainmenu-area {
   width: 190px; 
-  position: fixed; 
+  position: relative; 
   margin-left: 50px; 
 }
 
