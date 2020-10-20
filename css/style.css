@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
+@import url(http://fonts.googleapis.com/css?family=Din:400,300,500,600,700,800,900,100,200);
 
 body{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Din', sans-serif;
   font-size:14px;
   font-weight: 400;
   overflow-y:scroll;
